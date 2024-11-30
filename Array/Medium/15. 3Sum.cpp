@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(n²)
+Space Complexity: O(n²)
+*/
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
@@ -11,9 +15,11 @@ public:
                 int s = nums[i] + nums[l] + nums[r];
                 if (s > 0) {
                     r--;
-                } else if (s < 0) {
+                } 
+                else if (s < 0) {
                     l++;
-                } else {
+                } 
+                else {
                     res.push_back({nums[i], nums[l], nums[r]});
                     while (l < r && nums[l] == nums[l + 1])
                         l++;
