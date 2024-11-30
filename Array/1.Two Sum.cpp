@@ -1,4 +1,4 @@
-https://leetcode.com/problems/two-sum/
+[Problem](https://leetcode.com/problems/two-sum/)
 
 /*
 Bruteforce Approach:
