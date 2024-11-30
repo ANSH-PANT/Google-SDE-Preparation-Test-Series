@@ -1,5 +1,3 @@
-[https://leetcode.com/problems/two-sum/]
-
 /*
 Bruteforce Approach:
 Time Complexity: O(n²)
