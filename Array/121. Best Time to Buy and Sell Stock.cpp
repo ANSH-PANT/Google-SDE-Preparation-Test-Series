@@ -1,28 +1,22 @@
-//code 1
+/*
+Time Complexity: O(n)
+Space Complexity: O(1)
+*/
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-int first_price=0;int profit=INT_MAX;
-for(auto i:prices){
-    profit=min(i,profit);
-    first_price=max(first_price,i-profit);
-}
-return first_price;
-    }
-};
-//code 2
-class Solution {
-public:
-    int maxProfit(vector<int>& prices) {
-        int first_price=prices[0];
-int profit= INT_MIN;
-for(int i=1;i<prices.size();i++){
-       profit= max(profit ,prices[i]-first_price);
-       first_price=min(first_price,prices[i]);
-}
-if(profit<0){
-    return 0;
-    }
-return profit;
+        int minPrice = INT_MAX;
+        int maxProfit = 0;
+        int n = prices.size();
+        for (int i = 0; i < n; i++) {
+            if (prices[i] < minPrice) {
+                minPrice = prices[i];
+            }
+            int profit = prices[i] - minPrice;
+            if (profit > maxProfit) {
+                maxProfit = profit;
+            }
+        }
+        return maxProfit;
     }
 };
